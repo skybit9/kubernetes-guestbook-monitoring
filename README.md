@@ -29,13 +29,15 @@ Pulumi (Python)
 
 ## Prerequisites
 
+> **Note:** This guide is written for **macOS**. Commands use Homebrew and macOS-specific tooling. Steps will differ on Windows or Linux.
+
 | Tool | Install |
 |------|---------|
 | Docker Desktop | https://docker.com |
 | Minikube | `brew install minikube` |
 | kubectl | `brew install kubectl` |
 | Pulumi | `brew install pulumi` |
-| Python 3.11 | `brew install python@3.11` |
+| Python 3.14 | `brew install python@3.14` |
 
 ---
 
@@ -44,8 +46,10 @@ Pulumi (Python)
 ### 1. Start Minikube
 
 ```bash
-minikube start --cpus=4 --memory=6144 --driver=docker
+minikube start --cpus=4 --memory=8192 --driver=docker
 ```
+
+> **Requirement:** Docker Desktop must have at least **8GB RAM** allocated. Go to Docker Desktop → Settings → Resources → Memory → set to 8GB or higher → Apply & Restart.
 
 Verify:
 ```bash
